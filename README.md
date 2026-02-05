@@ -25,6 +25,9 @@
 
 ### Installation
 
+you can directly install it by 
+pip install convctl
+or else 
 ```bash
 # Clone or download
 git clone https://github.com/yourusername/convctl.git
