@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convctl"
+version = "2.0.0"
+description = "Universal File Converter - Interactive CLI tool for documents, images, media, and PDF operations"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "chetan mahapatra", email = "mahapatrachetan@gmail.com"}
+]
+keywords = ["converter", "pdf", "docx", "images", "media", "cli", "tool"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+    "Topic :: Office/Business",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+]
+
+dependencies = [
+    "Pillow>=9.0.0",
+    "pypdf>=3.0.0",
+    "pdf2image>=1.16.0",
+    "pdf2docx>=0.4.6",
+    "reportlab>=3.6.0",
+    "tqdm>=4.62.0",
+]
+
+[project.optional-dependencies]
+windows = [
+    "docx2pdf>=0.1.8",
+    "pywin32>=227",
+]
+linux = [
+    "weasyprint>=53.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.scripts]
+convctl = "convctl.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Mayberyzen/convctl"
+Repository = "https://github.com/Mayberyzen/convctl"
+Issues = "https://github.com/Mayberyzen/convctl/issues"
+
+[tool.setuptools]
+packages = ["convctl"]
+
+[tool.setuptools.package-data]
+convctl = ["*.txt", "*.md"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
