@@ -6,8 +6,6 @@
 
 &gt; A powerful, interactive CLI tool for converting documents, images, media files, and PDF operations with an intuitive menu-driven interface.
 
-![Demo](https://via.placeholder.com/800x400/2d2d2d/ffffff?text=Convctl+Interactive+Menu)
-
 ---
 
 ## ✨ Features
@@ -34,3 +32,37 @@ cd convctl
 
 # Install
 pip install -e .
+
+First Run
+bash
+Copy
+# Just type
+convctl
+
+# Or run directly
+python -m convctl
+📖 Usage
+Interactive Mode (Recommended)
+bash
+Copy
+$ convctl
+
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ██████╗ ██████╗ ███╗   ██╗██╗   ██╗ ██████╗████████╗██╗      ║
+║  ██╔════╝██╔═══██╗████╗  ██║██║   ██║██╔════╝╚══██╔══╝██║      ║
+║  ...                                                            ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎯 MAIN MENU
+
+  [1] 📄 Document Conversions
+  [2] 🖼️  Image Conversions
+  [3] 📑 PDF Operations
+  [4] 🎵 Media Conversions
+  [5] 🔄 Custom Conversion (Any → Any)
+  [6] 🔍 System Check (Doctor)
+  [7] 🔧 Install Dependencies
+  [0] ❌ Exit
+
+Select option:
